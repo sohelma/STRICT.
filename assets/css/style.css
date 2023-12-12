@@ -1,0 +1,206 @@
+
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;500;600;700&display=swap'); */
+
+  @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family:'lato';
+    box-sizing: border-box; /* Border-box: padding use korle box boro hoi. Atake control kore. */
+    scroll-behavior: smooth;     /* about page a click korle smoothly scroll hobe. suddenly na*/
+}
+h1,h2,h3,h4,h5,h6{font-family: 'lato';}
+p{font-family: 'lato';}
+/*------headline a oswald use so h ke dia upore only open sens p are jonn raklam------*/
+/*------BG on scroll start- for plug------------*/
+.navbar{padding: 13px 0px 13px;}
+.navbar{position: fixed; top: 0;
+    background:white;width: 100%; 
+   transition: .4s;z-index: 12;}
+    .bg_animation{animation: bgDown 0.4s ease-out;}
+    @keyframes bgDown {
+        from{transform: translateY(-100px);}
+        to{transform: translateY(0);}
+        
+    }    
+/* plugin preloader start*/
+.preloader{position: fixed;
+width: 100%;
+height: 100vh;
+background: lightgray;
+display: flex;justify-content: center;align-items: center;}
+
+.custom-loader {
+    --d:22px;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    color: blue;
+    box-shadow: 
+      calc(1*var(--d))      calc(0*var(--d))     0 0,
+      calc(0.707*var(--d))  calc(0.707*var(--d)) 0 1px,
+      calc(0*var(--d))      calc(1*var(--d))     0 2px,
+      calc(-0.707*var(--d)) calc(0.707*var(--d)) 0 3px,
+      calc(-1*var(--d))     calc(0*var(--d))     0 4px,
+      calc(-0.707*var(--d)) calc(-0.707*var(--d))0 5px,
+      calc(0*var(--d))      calc(-1*var(--d))    0 6px;
+    animation: s7 1s infinite steps(8);
+  }
+  
+  @keyframes s7 {
+    100% {transform: rotate(1turn)}
+  }
+/* plugin preloader end*/
+
+
+/*------Back to top button start-for plugin-------*/
+.back_to_top {position:fixed;bottom: 2px;right: 40px;
+   /*-- first time test then jq use korbo for condition--*/
+    animation:btt 0.4s ease-in ;
+    }
+/*------Back to top button end--------*/
+/*------first part start------*/
+.first{background:#e3f8f8;
+width: 100%;
+height: auto;
+}
+/* --bs-navbar-padding-y: 15PX; */
+
+
+.navbar-expand-lg .navbar-collapse {
+    margin-right: 0;font-size: 14px;}
+.navbar-brand {font-size: 35px;font-weight: 600;
+}
+.nav-link {font-weight: 700;}
+.nav-link:hover {color: rgb(3, 172, 158);}
+/*----------------Hero part start--------------------*/
+.hero_part{background: url(../img/Hero.png);
+background-repeat: no-repeat;
+background-size: cover;
+height: 600px; 
+}
+.btn{color: white;}
+.hero_part h1{margin-top: 215px;font-size: 80px;font-weight: 700;}
+.hero_part h5{font-size: 10px;}
+
+/*---------------------second part start--------------------*/
+
+.feature_icon li{font-size: 20px;}
+.second_con_icon {
+    list-style-type: none;
+    height: 70px;
+    width: 70px;
+    align-items: center;
+}
+.underline{height: 1px;width: 65%;background:blue;}
+/* .feature_icon li{border-radius: 50%;width: 5px;height: 5px;color: red;} */
+
+/*----------Showcase part start ------------*/
+.work_light{ color: rgb(206, 206, 206);}
+.showcase{background: #e3f8f8}
+.card img:hover{opacity: 0.3;}
+.card img:hover + .showcase_icon {visibility:visible;}
+
+.showcase_icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  border-radius: 50%;
+  visibility:hidden;
+}
+
+  .card{position: relative;}
+  .showcase_icon img {
+    width: 60px;
+    border: 2px solid white;
+    padding: 13px;
+    margin: 0 6px;
+}
+/*-----------Third part (quote)start --------------*/
+.third_img{font-size: 40px;color: gray;}
+.third_part {background: #e3f8f8;}
+.third_con p{color:gray;font-size: 18px; }
+/*------footer-link part start ------*/
+.foot_below ul li{list-style: none;font-size: 14px;}
+.foot_h h5{color: rgb(145, 144, 144);font-weight: 600;}
+.foot_con_main p{font-size: 14px;}
+.foot_con_main{color: rgb(202, 201, 201);}
+ul{padding-left: 0;}
+/*------footer part start ------*/
+
+.form-control{color:white;background: #000;
+width:50%
+}
+.footer_part{
+    background: url("../img/form.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 55px 0;
+}
+.foot_con h2{color: white;}
+.foot_con p{color: rgb(192, 189, 189);}
+.user-box {
+    position: relative;
+   
+}
+.user-box label {
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    padding: 10px 0;
+    color:rgb(184, 184, 184);
+    font-size: 16px;
+    pointer-events: none;
+    transition: transform 0.3s ease;
+}
+.user-box input {
+   width: 100%; 
+   height: 55px; 
+  padding: 0px 130px 0;
+  font-size: 16px;
+  color: white;
+  margin-bottom: 15px;
+  border: 1px solid gray;
+  outline: none;
+  background: transparent;
+}
+.user-box textarea {
+  width: 100%;
+  height: 138px;
+  padding: 0px 129px 0;
+  background: transparent;
+}
+.contact-form {
+    margin-top: 50px;
+}
+.rounded-0 {
+  padding: 5px 25px;
+  background: transparent;
+  color: white; 
+  border: 1px solid rgb(0, 174, 255);
+}
+.news-color{color: rgb(189, 185, 185);}
+.checkbox span{color: rgb(161, 160, 160);}
+/* -----------------------footer-last -----------------*/
+.footer ul {
+  list-style: none;
+  text-align: center;
+  gap: 10px;
+}
+
+.footer ul li {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 20px;
+  border-radius: 10%;
+  transition: .4s;
+}
+.footer ul li:hover{color:#000;}
